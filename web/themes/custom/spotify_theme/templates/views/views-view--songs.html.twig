@@ -1,0 +1,80 @@
+{%
+  set classes = [
+    'view',
+    'view-' ~ id|clean_class,
+    'view-id-' ~ id,
+    'view-display-id-' ~ display_id,
+    dom_id ? 'js-view-dom-id-' ~ dom_id,
+  ]
+%}
+<div{{ attributes.addClass(classes) }}>
+  {{ title_prefix }}
+  {% if title %}
+    {{ title }}
+  {% endif %}
+  {{ title_suffix }}
+  {% if header %}
+    <div class="view-header">
+      {{ header }}
+    </div>
+  {% endif %}
+  {% if exposed %}
+    <div class="view-filters">
+      {{ exposed }}
+    </div>
+  {% endif %}
+  {% if attachment_before %}
+    <div class="attachment attachment-before">
+      {{ attachment_before }}
+    </div>
+  {% endif %}
+
+  {% if rows %}
+      <div class="view-content pt-5">
+        {% for row in rows.0['#rows'] %}
+            <div class="songs-song-item row">
+                <div class="col-12 col-md-6">
+                    {% if (row['#row']._relationship_entities.field_album.field_image.value) %}
+                        <img class="album-image" src="{{ row['#row']._relationship_entities.field_album.field_image.value }}">
+                    {% else %}
+                        <img class="album-image" src="/themes/custom/spotify_theme/assets/images/spotify-no-image.png">
+                    {% endif %}
+                    <div class="songs-song-name-artist">
+                        <div><a class="songs-song-name" href="/songs/{{ row['#row']._entity.field_spotify_slug.value }}">{{ row['#row'].node_field_data_title }}</a></div>
+                        <div><a class="songs-song-artist" href="/artists/{{ row['#row']._relationship_entities.field_artist.field_spotify_slug.value }}">{{ row['#row']._relationship_entities.field_artist.label }}</a></div>
+                    </div>
+                </div>
+                <div class="hidden-xs col-md-6">
+                    <div class="songs-song-album">{{ row['#row']._relationship_entities.field_album.label }}</div>
+                </div>
+            </div>
+        {% endfor %}
+      </div>
+  {% elseif empty %}
+    <div class="view-empty">
+      {{ empty }}
+    </div>
+  {% endif %}
+
+  {% if pager %}
+    {{ pager }}
+  {% endif %}
+  {% if attachment_after %}
+    <div class="attachment attachment-after">
+      {{ attachment_after }}
+    </div>
+  {% endif %}
+  {% if more %}
+    {{ more }}
+  {% endif %}
+  {% if footer %}
+    <div class="view-footer">
+      {{ footer }}
+    </div>
+  {% endif %}
+  {% if feed_icons %}
+    <div class="feed-icons">
+      {{ feed_icons }}
+    </div>
+  {% endif %}
+</div>

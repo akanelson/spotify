@@ -1,0 +1,76 @@
+uuid: 5df953b4-5887-4692-ae5a-21831cba26ee
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.artists.field_followers
+    - field.field.node.artists.field_genres
+    - field.field.node.artists.field_image
+    - field.field.node.artists.field_spotify_link
+    - field.field.node.artists.field_spotify_slug
+    - node.type.artists
+  module:
+    - link
+id: node.artists.default
+targetEntityType: node
+bundle: artists
+mode: default
+content:
+  field_followers:
+    type: number
+    weight: 27
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_genres:
+    type: options_buttons
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_image:
+    type: string_textfield
+    weight: 30
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_spotify_link:
+    type: link_default
+    weight: 28
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+  field_spotify_slug:
+    type: string_textfield
+    weight: 29
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 3
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  path: true
+  promote: true
+  sticky: true
+  uid: true

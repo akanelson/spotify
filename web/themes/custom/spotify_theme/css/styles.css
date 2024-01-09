@@ -1,0 +1,545 @@
+body {
+  background-color: #121212;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  color: #ffffff
+}
+
+h2.title {
+  text-align: center;
+  padding-bottom: 1rem;
+  font-size: 4rem;
+  font-weight: 600;
+}
+
+h3.title {
+  text-align: center;
+  padding-bottom: 2rem;
+  font-size: 2rem;
+  font-weight: 200;
+}
+
+.full-width {
+  width: 100vw;
+  position: relative;
+  margin-left: -50vw;
+  height: 100px;
+  margin-top: 100px;
+  left: 50%;
+  height: 100%;
+}
+
+.full-width-section {
+  width: 100vw;
+  height: 100px;
+  margin-top: 100px;
+  max-width: 100vw;
+  margin-left: calc(50% - 50vw);
+}
+
+
+ul li {
+  display: inline-block;
+}
+
+/* Menu */
+.region-primary-menu .menu {
+  text-align: right;
+  margin-top: 2rem;
+}
+
+.region-primary-menu .menu-item a {
+  font-size: 2rem;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 2rem;
+}
+
+.region-primary-menu .menu-item a:hover {
+  background-color: #282828;
+}
+
+.region-primary-menu .menu-item--active-trail a,
+.region-primary-menu .menu-item a.is-active {
+  border: 1px solid #ffffff;
+  border-radius: 4px;
+  color: #ffffff;
+}
+
+/* 992px and down) */
+@media only screen and (max-width: 992px) {
+  .region-primary-menu .menu {
+    text-align: center;
+  }
+
+  .region-primary-menu .menu-item a {
+    font-size: 1rem;
+    padding: 0.5rem;
+  }
+}
+/* End Menu */
+
+/* Start Top 20 Songs */
+
+.slick-dots {
+  position: relative;
+  bottom: 0;
+}
+
+.slick-dots li button::before {
+  color: #ffffff !important;
+  font-size: 0.5rem !important;
+  top: 1.5rem;
+}
+
+.song-item:hover {
+  cursor: pointer;
+}
+
+.song-item,
+.artist-album-item {
+  position: relative;
+}
+
+.song-info,
+.artist-album-info {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  padding: 1rem 2rem;
+  background-color: #121212;
+  opacity: 0.7;
+}
+
+.song-image,
+.artist-album-image {
+  width: 80%;
+}
+
+.song-ranking {
+  font-size: 2rem;
+  font-style: italic;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.song-name,
+.artist-album-name {
+  font-size: 1rem;
+  color: #ffffff;
+  text-decoration: none;
+}
+/* End Top 20 Songs */
+
+
+/* Start 10 Random Artists */
+.random-10-artists-wrapper {
+  margin-bottom: 10rem !important;
+}
+
+.artist-item {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+/* 1400px and down) */
+@media only screen and (max-width: 1400px) {
+  .artist-item {
+    margin-bottom: 2rem;
+  }
+}
+/* 1200px and down) */
+@media only screen and (max-width: 1200px) {
+  .artist-item {
+    margin-bottom: 0;
+  }
+}
+/* 992px and down) */
+@media only screen and (max-width: 992px) {
+  .artist-item {
+    margin-bottom: 0.5rem;
+  }
+}
+
+a.artist-wrapper {
+  display: inline-block;
+  padding: 3rem;
+  background-color: #181818;
+  border-radius: 4px;
+  text-decoration: none;
+}
+
+a.artist-wrapper:hover {
+  background-color: #282828;
+}
+
+.artist-image {
+  width: 16rem;
+  height: 16rem;
+  border-radius: 50%;
+  overflow: hidden;
+  -webkit-box-shadow: 0px 0px 24px 20px rgb(0 0 0 / 50%);
+  box-shadow: 0px 0px 24px 20px rgb(0 0 0 / 50%);
+}
+
+.artist-name {
+  padding-top: 2rem;
+  font-size: 1.4rem;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.view-more {
+  display: block;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.view-more a {
+  text-align: center;
+  padding: 1.2rem 1.5rem;
+  border: 1px solid #ffffff;
+  border-radius: 4px;
+  display: inline-block;
+  color: #ffffff;
+  font-size: 1rem;
+  text-decoration: none;
+}
+
+.view-more a:hover {
+  background-color: #282828;
+}
+/* End 10 Random Artists */
+
+/* Views Exposed Form */
+
+.view-filters .views-exposed-form {
+  background-color: transparent !important;
+}
+
+.views-exposed-form .form-item {
+  display: inline-block;
+}
+
+.views-exposed-form .form-actions {
+  display: inline-block;
+}
+
+.views-exposed-form .form-text {
+  display: block;
+  height: 38px;
+  border-radius: 0.25rem;
+  border: 1px solid #ced4da;
+  font-size: 1rem;
+  font-weight: 400;
+  padding-left: 1rem;
+  margin-top: 0;
+  max-width: 250px;
+}
+
+.views-exposed-form .button {
+  margin: 1rem 0 0 1rem;
+  padding: 1.2rem 1.5rem;
+  border: 1px
+  solid #ffffff;
+  background-color: transparent;
+  border-radius: 4px;
+  color: #ffffff;
+}
+
+.views-exposed-form .button:hover {
+  background-color: #282828;
+}
+
+/* End Views Exposed Form */
+
+/* Views Pager */
+.pager .pager__items {
+  text-align: center;
+}
+
+.pager .pager__item {
+  display: inline-block;
+  padding: 1rem 0.5rem;
+}
+
+.pager .pager__item a {
+  color: #ffffff;
+  text-decoration: none;
+  background-color: #282828;
+}
+
+.pager .pager__item.is-active a {
+  border: 1px solid #ffffff;
+  padding: 0.5rem;
+}
+
+.pager .pager__item a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+  background-color: #181818;
+}
+
+/* End Views Pager */
+
+/* Songs */
+.songs-song-item {
+  padding: 0.5rem;
+}
+
+.songs-song-item:hover {
+  background-color: #282828;
+  border-radius: 4px;
+}
+
+.album-image {
+  width: 60px;
+}
+
+.songs-song-name-artist {
+  display: inline-block;
+  vertical-align: middle;
+  padding-left: 1rem;
+}
+
+.songs-song-artist {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.songs-song-name,
+.songs-song-artist {
+  text-decoration: none;
+  color: #ffff;
+}
+
+.songs-song-name:hover,
+.songs-song-artist:hover {
+  text-decoration: underline;
+  color: #ffff;
+}
+
+.songs-song-album {
+  vertical-align: middle;
+}
+/* End Songs */
+
+/* Artist */
+.artist-brand-wrapper {
+  position: relative;
+  top: 0;
+  width: 100%;
+}
+.artist-brand {
+  font-size: 6rem;
+  font-weight: 600;
+  position: absolute;
+  top: 6rem
+}
+
+.artist-followers {
+  font-size: 1.2rem;
+  position: absolute;
+  top: 15rem;
+}
+
+.artist-listen {
+  position: absolute;
+  top: 25rem;
+}
+
+.artist-listen img {
+  width: 300px;
+}
+
+.artist-listen:hover {
+  box-shadow: 0px 0px 20px 10px #282828;
+}
+
+.artist-genres {
+  top: 32em;
+  position: absolute;
+}
+
+.artist-genre {
+  display: inline-block;
+  background-color: #000000;
+  padding: 0.5rem 1rem;
+  margin-bottom: 0.5rem;
+  border-radius: 4px;
+}
+
+.album-listen {
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+}
+
+.album-listen img {
+  width: 200px;
+}
+/* End Artist */
+
+/* Song */
+
+.song-brand-wrapper {
+  position: relative;
+  top: 0;
+  width: 100%;
+}
+.song-brand {
+  font-size: 6rem;
+  font-weight: 600;
+  position: absolute;
+  display: inline-block;
+  position: absolute;
+  top: 6rem;
+  left: 5rem;
+}
+
+.song-popularity {
+  display: inline-block;
+  border-radius: 50%;
+  padding: 12px 15px;
+  font-size: 1.5rem;
+  color: #ffffff;
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  margin-top: 28px;
+  margin-right: 1rem;
+  position: absolute;
+  top: 6rem;
+}
+
+/* 1200px and down) */
+@media only screen and (max-width: 1200px) {
+  .song-brand {
+    font-size: 4rem;
+  }
+  .song-popularity {
+    margin-top: 8px;
+  }
+}
+
+/* 992px and down) */
+@media only screen and (max-width: 992px) {
+  .song-brand {
+    font-size: 2rem;
+  }
+  .song-popularity {
+    margin-top: -10px;
+  }
+}
+
+.song-title {
+  font-size: 4rem;
+  font-weight: 600;
+  display: inline-block;
+  vertical-align: middle;
+}
+.song-genre {
+  display: inline-block;
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  padding: 0.5rem 1rem;
+  margin-bottom: 0.5rem;
+  border-radius: 4px;
+}
+
+.song-popularity.low {
+  background-color: red;
+}
+
+.song-popularity.mid {
+  background-color: orange;
+}
+
+.song-popularity.high {
+  background-color: green;
+}
+
+.song-listen {
+  position: absolute;
+  top: 25rem;
+  left: 0;
+}
+
+.song-listen img {
+  width: 300px;
+}
+
+.song-listen:hover {
+  box-shadow: 0px 0px 20px 10px #282828;
+}
+
+.song-album-image {
+  width: 300px;
+}
+
+.song-artist-name {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.song-artist-name:hover {
+  text-decoration: underline;
+  color: #ffffff;
+}
+
+.song-album-title {
+  font-size: 2rem;
+}
+
+.song-album-released {
+  font-size: 1.5rem;
+  font-weight: 200;
+  font-style: italic;
+}
+
+/* End Song*/
+
+/* Search */
+
+.views-table {
+  background-color: transparent;
+}
+
+tr {
+  background-color: transparent;
+}
+
+th.views-field-title-2 {
+  min-width: 300px;
+}
+
+th.views-field-title-1 {
+  min-width: 400px;
+}
+
+tr {
+  border-bottom: 10px solid transparent;
+}
+
+tr:hover {
+  background-color: #282828;
+  border-radius: 4px;
+}
+
+td a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+td a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+td.views-field-title-2 img {
+  margin-left: 10px;
+}
+
+tbody .views-field.views-field-title-1 {
+  color: white;
+}
+/* End Search */

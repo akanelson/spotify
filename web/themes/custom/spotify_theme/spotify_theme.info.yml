@@ -1,0 +1,11 @@
+# Define Spotify Integration theme.
+name: spotify_theme
+description: Theme for Drupal Spotify Integration
+type: theme
+package: 'Custom'
+core_version_requirement: ^9 || ^10
+base theme: claro
+libraries:
+  - spotify_theme/bootstrap_cdn
+  - spotify_theme/global-styling
+  - spotify_theme/fonts

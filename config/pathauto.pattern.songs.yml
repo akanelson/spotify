@@ -1,0 +1,22 @@
+uuid: c3143077-a51a-42a0-a706-50a38d0b0c75
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: songs
+label: Songs
+type: 'canonical_entities:node'
+pattern: '/songs/[node:field_spotify_slug]'
+selection_criteria:
+  c860dc01-6ed1-44c2-8db7-2286b89da80b:
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: c860dc01-6ed1-44c2-8db7-2286b89da80b
+    context_mapping:
+      node: node
+    bundles:
+      songs: songs
+selection_logic: and
+weight: -5
+relationships: {  }

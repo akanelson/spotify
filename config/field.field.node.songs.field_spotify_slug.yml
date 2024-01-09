@@ -1,0 +1,19 @@
+uuid: 040f550b-32d7-4b44-a82d-5caf06c7eec3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_spotify_slug
+    - node.type.songs
+id: node.songs.field_spotify_slug
+field_name: field_spotify_slug
+entity_type: node
+bundle: songs
+label: 'Spotify Slug'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

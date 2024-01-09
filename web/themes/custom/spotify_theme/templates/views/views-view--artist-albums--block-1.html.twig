@@ -1,0 +1,28 @@
+{{ attach_library('spotify_integration/artist_albums_slick') }}
+
+<h2 class="title">{{ "Artist's Albums"|t }}</h2>
+
+  {% if rows %}
+      <div class="view-content pt-5 artist-albums-wrapper">
+            {% for row in rows.0['#rows'] %}
+                <div class="artist-album-item">
+                    {% if (row['#row']._entity.field_image.value) %}
+                        <img class="artist-album-image" src="{{ row['#row']._entity.field_image.value }}">
+                    {% else %}
+                        <img class="artist-album-image" src="/themes/custom/spotify_theme/assets/images/spotify-no-image.png">
+                    {% endif %}
+                    <div class="artist-album-info">
+                        <div class="artist-album-name">{{ row['#row']._entity.title.value }}</div>
+                    </div>
+                    <a class="album-listen" target="_blank" href="{{ row['#row']._entity.field_spotify_link.value.0.uri }}">
+                      <img src="/themes/custom/spotify_theme/assets/images/listen-spotify.png">
+                    </a>
+                </div>
+            {% endfor %}
+      </div>
+  {% elseif empty %}
+    <div class="view-empty">
+      {{ empty }}
+    </div>
+  {% endif %}
+</div>

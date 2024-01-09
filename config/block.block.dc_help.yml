@@ -1,0 +1,22 @@
+uuid: 4d1cf9de-ae5f-4aae-9768-2b7742a52bee
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - spotify_theme
+_core:
+  default_config_hash: 8I8iACSa0sKO3k3jlvUG1ge52rfcKX7USJAQYnzuBgg
+id: dc_help
+theme: spotify_theme
+region: content
+weight: -2
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  label_display: '0'
+  provider: help
+visibility: {  }

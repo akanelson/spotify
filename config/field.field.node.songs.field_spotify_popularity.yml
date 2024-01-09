@@ -1,0 +1,23 @@
+uuid: 84ae2c4f-c6d5-4ad1-9fb9-8e577838b19a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_spotify_popularity
+    - node.type.songs
+id: node.songs.field_spotify_popularity
+field_name: field_spotify_popularity
+entity_type: node
+bundle: songs
+label: 'Spotify Popularity'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

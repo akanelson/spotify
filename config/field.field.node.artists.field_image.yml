@@ -1,0 +1,21 @@
+uuid: d7301d28-c029-47bc-9724-427672361635
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_image
+    - node.type.artists
+id: node.artists.field_image
+field_name: field_image
+entity_type: node
+bundle: artists
+label: Image
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: /themes/dc/assets/images/spotify-no-image.png
+default_value_callback: ''
+settings: {  }
+field_type: string

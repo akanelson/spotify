@@ -1,0 +1,6 @@
+spotify_integration.settings_form:
+  title: 'Spotify Settings Form'
+  route_name: spotify_integration.settings_form
+  description: 'Spotify API Settings Form Link'
+  parent: system.admin_config_system
+  weight: 99

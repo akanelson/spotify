@@ -1,0 +1,27 @@
+uuid: 08a02498-20ec-4582-8417-e7a71e43baac
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - spotify_theme
+_core:
+  default_config_hash: 7rR9chwXvdM2H8OYMAYx9Zj3GGlPMrZp_M3ZA4thYTk
+id: dc_page_title
+theme: spotify_theme
+region: content
+weight: -4
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  label_display: '0'
+  provider: core
+visibility:
+  request_path:
+    id: request_path
+    negate: true
+    context_mapping: {  }
+    pages: "<front>\r\n/artists/*\r\n/songs/*"

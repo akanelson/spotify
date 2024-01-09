@@ -1,0 +1,21 @@
+global-styling:
+  version: 1.x
+  js:
+    js/global.js: {}
+  css:
+    component:
+      css/styles.css: {preprocess: false}
+
+fonts:
+  css:
+    theme:
+      '//fonts.googleapis.com/css2?family=Poppins:wght@200;400;600;800&display=swap': { type: external, minified: true }
+
+bootstrap_cdn:
+  js:
+    //cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js: {}
+    //cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js: {}
+  css:
+    component:
+      //cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css: {}
+      //cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css: {}

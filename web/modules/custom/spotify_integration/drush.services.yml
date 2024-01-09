@@ -1,0 +1,6 @@
+services:
+  spotify_integration.commands:
+    class: \Drupal\spotify_integration\Commands\SpotifyImportCommands
+    tags:
+      - { name: drush.command }
+    arguments: ['@spotify_integration.spotify_client', '@entity_type.manager']

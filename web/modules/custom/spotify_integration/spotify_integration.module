@@ -1,0 +1,65 @@
+<?php
+
+/**
+ * @file
+ * This is the module to integrate Spotify.
+ */
+
+/**
+ * Implements hook_theme().
+ */
+function spotify_integration_theme($existing, $type, $theme, $path) {
+  return [
+    'top_20_songs' => [
+      'variables' => ['songs' => NULL],
+    ],
+    'home' => [
+      'variables' => [],
+    ],
+    'artist_top_10_songs' => [
+      'variables' => ['songs' => NULL],
+    ],
+  ];
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function spotify_integration_preprocess_node(&$variables) {
+  if ($variables['node']->getType() == 'songs') {
+    $nodeManager = \Drupal::entityTypeManager()->getStorage('node');
+    $termManager = \Drupal::entityTypeManager()->getStorage('taxonomy_term');
+
+    $node = $variables['node'];
+    // Song.
+    $data['field_spotify_link'] = $node->field_spotify_link[0]->uri;
+    $data['title'] = $node->title->value;
+    $data['field_spotify_popularity'] = $node->field_spotify_popularity->value;
+    if ($data['field_spotify_popularity'] < 35) {
+      $data['field_spotify_popularity_category'] = 'low';
+    }
+    elseif ($data['field_spotify_popularity'] < 70) {
+      $data['field_spotify_popularity_category'] = 'mid';
+    }
+    else {
+      $data['field_spotify_popularity_category'] = 'high';
+    }
+    // Album.
+    $album_id = $node->field_album->target_id;
+    $album = $nodeManager->load($album_id);
+    $data['field_album_image'] = $album->field_image[0]->value;
+    $data['field_album'] = $album->title->value;
+    $data['field_release_date'] = $album->field_release_date;
+    // Artist.
+    $artist_id = $album->field_artist->target_id;
+    $artist = $nodeManager->load($artist_id);
+    $data['field_artist'] = $artist->title->value;
+    $data['field_artist_image'] = $artist->field_image[0]->value;
+    $data['field_artist_slug'] = $artist->field_spotify_slug->value;
+    foreach ($artist->field_genres as $genre) {
+      $data['field_genres'][] = $termManager->load($genre->target_id)->name->value;
+    }
+
+    $variables['data'] = $data;
+  }
+}

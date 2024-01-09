@@ -1,0 +1,28 @@
+uuid: 668fd123-8fa4-4531-ba5a-208665089bdb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_artist
+    - node.type.albums
+    - node.type.artists
+id: node.albums.field_artist
+field_name: field_artist
+entity_type: node
+bundle: albums
+label: Artist
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      artists: artists
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

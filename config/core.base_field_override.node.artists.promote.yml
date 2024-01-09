@@ -1,0 +1,22 @@
+uuid: 8e6c99e7-3121-45dd-ac1e-09c74dee4266
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.artists
+id: node.artists.promote
+field_name: promote
+entity_type: node
+bundle: artists
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

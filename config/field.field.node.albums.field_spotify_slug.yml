@@ -1,0 +1,19 @@
+uuid: c45147f5-fb83-4b6f-a9dc-12610c9595d6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_spotify_slug
+    - node.type.albums
+id: node.albums.field_spotify_slug
+field_name: field_spotify_slug
+entity_type: node
+bundle: albums
+label: 'Spotify Slug'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

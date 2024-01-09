@@ -1,0 +1,22 @@
+uuid: 1ebb37da-51e2-4f10-9666-2317b3d9dd5e
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - spotify_theme
+_core:
+  default_config_hash: 9EoWV2Lot6FVSr50t4hoKgiz1LIXYWNG-IIPYsWxBqo
+id: dc_content
+theme: spotify_theme
+region: content
+weight: 0
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  label_display: '0'
+  provider: system
+visibility: {  }

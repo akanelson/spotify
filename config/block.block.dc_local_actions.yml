@@ -1,0 +1,20 @@
+uuid: 22602d34-cf2c-4609-920f-c732208c2b9a
+langcode: en
+status: true
+dependencies:
+  theme:
+    - spotify_theme
+_core:
+  default_config_hash: 13GQpeITIJsp1kyPniXtWZfyFH87vb1xxJCHifL4UeE
+id: dc_local_actions
+theme: spotify_theme
+region: content
+weight: -1
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  label_display: '0'
+  provider: core
+visibility: {  }

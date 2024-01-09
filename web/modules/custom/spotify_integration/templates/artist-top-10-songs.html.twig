@@ -1,0 +1,23 @@
+<h2 class="title">{{ "Artist's Top #10 Songs"|t }}</h2>
+<div class="artist-top-10-songs-wrapper">
+    {% for song in songs %}
+        <div class="artist-song-item">
+            <div class="songs-song-item row">
+                <div class="col-12 col-md-6">
+                    {% if (song.album.images) %}
+                        <img class="album-image" src="{{ song.album.images.0.url }}">
+                    {% else %}
+                        <img class="album-image" src="/themes/spotify_theme/assets/images/spotify-no-image.png">
+                    {% endif %}
+                    <div class="songs-song-name-artist">
+                        <div class="songs-song-number">#{{ loop.index }}</div>
+                        <div><a class="songs-song-name" href="/songs/{{ song.id }}">{{ song.name }}</a></div>
+                    </div>
+                </div>
+                <div class="hidden-xs col-md-6">
+                    <div class="songs-song-album">{{ song.album.name }}</div>
+                </div>
+            </div>            
+        </div>
+    {% endfor %}
+</div>

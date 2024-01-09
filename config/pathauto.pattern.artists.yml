@@ -1,0 +1,22 @@
+uuid: 2d67683e-3791-4289-a887-58a722ab671d
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: artists
+label: Artists
+type: 'canonical_entities:node'
+pattern: '/artists/[node:field_spotify_slug]'
+selection_criteria:
+  9a39788e-85f9-4724-a434-29b06cd26506:
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: 9a39788e-85f9-4724-a434-29b06cd26506
+    context_mapping:
+      node: node
+    bundles:
+      artists: artists
+selection_logic: and
+weight: -5
+relationships: {  }

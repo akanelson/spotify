@@ -1,0 +1,133 @@
+# Drupal scaffold (deployable)
+############
+/web/.htaccess
+/web/autoload.php
+/web/index.php
+/web/update.php
+
+# Drupal core
+############
+/web/core
+/web/profiles/contrib
+
+# Drupal contrib
+############
+/web/modules/contrib
+/web/themes/contrib
+/drush/Commands/contrib
+
+# Libraries (installed via Composer).
+/web/libraries
+
+# Composer vendors
+############
+/vendor
+
+# DEPLOY CONTENTS ABOVE - DO NOT REMOVE
+
+# Drupal scaffold
+############
+.editorconfig
+.gitattributes
+/web/.csslintrc
+/web/.eslintignore
+/web/.eslintrc.json
+/web/.ht.router.php
+/web/example.gitignore
+/web/INSTALL.txt
+/web/README.txt
+/web/robots.txt
+/web/web.config
+/web/sites/README.txt
+/web/sites/development.services.yml
+/web/sites/example.settings.local.php
+/web/sites/example.sites.php
+/web/sites/default/default.services.yml
+/web/sites/default/default.settings.php
+/web/modules/README.txt
+/web/profiles/README.txt
+/web/themes/README.txt
+
+# Ignore paths that contain user-generated content.
+############
+*/sites/*/files
+*/sites/*/private
+files/*
+
+# Files specific to local instances
+############
+cached.settings.inc
+web/sites/*/settings.local.php
+web/sites/*/services.yml
+
+# Backup files.
+############
+*.orig
+
+# Testing
+############
+.d8testsupport
+ddev.phpunit.xml
+.phplint-cache
+phpcs.xml
+phpstan.neon
+remote-ddev.phpunit.xml
+web/sites/simpletest
+
+# Local Development
+############
+**/css/dev
+*.git
+*.codekit*
+.ddev/php/xdebug.ini
+local.phpunit.xml
+settings.ddev.php
+
+# Packages #
+############
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
+# Logs and databases #
+######################
+*.log
+*.sql
+*.sqlite
+
+# OS generated files #
+######################
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# IDEs #
+########
+.idea
+
+# Vim generated files #
+######################
+*~
+*.swp
+*.swo
+
+# NODE mdoules #
+################
+/web/themes/custom/dc/node_modules
+
+# Compiled CSS #
+################
+/web/themes/custom/dc/css/*
+
+# VS CODE #
+###########
+/.vscode/

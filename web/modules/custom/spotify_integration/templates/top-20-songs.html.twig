@@ -1,0 +1,18 @@
+{{ attach_library('spotify_integration/top_songs_slick') }}
+
+<h2 class="title">{{ 'Ranking Top #20 Global'|t }}</h2>
+<h3 class="title">{{ 'Most listened Songs World Wide'|t }}</h3>
+
+<div class="top-20-songs-wrapper">
+    {% for song in songs %}
+        <div class="song-item">
+            {#<a href="/songs/{{ song.track.id }}">#}
+                <img class="song-image" src="{{ song.track.album.images.0.url }}">
+                <div class="song-info">
+                    <div class="song-ranking"># {{ loop.index }}</div>
+                    <div class="song-name">{{ song.track.name }}</div>
+                </div>
+            {#</a>#}
+        </div>
+    {% endfor %}
+</div>

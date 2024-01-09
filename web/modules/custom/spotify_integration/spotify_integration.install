@@ -1,0 +1,15 @@
+<?php
+
+/**
+ * @file
+ * The installation file.
+ */
+
+/**
+ * Implements hook_install().
+ */
+function spotify_integration_install() {
+  // Install and set as default spotify theme.
+  $theme = \Drupal::service('theme.initialization')->initTheme('spotify_theme');
+  \Drupal::service('theme.manager')->setActiveTheme($theme);
+}

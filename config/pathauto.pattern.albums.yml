@@ -1,0 +1,22 @@
+uuid: 208c1a54-28ef-45c5-8a95-356635e6d275
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: albums
+label: Albums
+type: 'canonical_entities:node'
+pattern: '/albums/[node:field_spotify_link]'
+selection_criteria:
+  dde36876-8831-4dd8-9546-5651a8580cab:
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: dde36876-8831-4dd8-9546-5651a8580cab
+    context_mapping:
+      node: node
+    bundles:
+      albums: albums
+selection_logic: and
+weight: 0
+relationships: {  }

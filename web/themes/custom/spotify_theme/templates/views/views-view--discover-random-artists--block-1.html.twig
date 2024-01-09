@@ -1,0 +1,29 @@
+<h2 class="title">{{ 'Featured Artists'|t }}</h2>
+<h3 class="title">{{ 'Discover new Artists from our random selection'|t }}</h3>
+<div class="random-10-artists-wrapper">
+    {% if rows %}
+        <div class="view-content pt-5 artist-albums-wrapper row">
+              {% for row in rows.0['#rows'] %}
+                <div class="artist-item col-12 col-sm-12 col-md-6 col-lg-4">
+                    <a class="artist-wrapper" href="/artists/{{ row['#row']._entity.field_spotify_slug.0.value }}">
+                        {% if (row['#row']._entity.field_image.value) %}
+                            <img class="artist-image" src="{{ row['#row']._entity.field_image.value }}">
+                        {% else %}
+                            <img class="artist-image" src="/themes/custom/spotify_theme/assets/images/spotify-no-image.png">
+                        {% endif %}
+                        <div class="artist-info">
+                            <div class="artist-name">{{ row['#row']._entity.title.value }}</div>
+                        </div>
+                    </a>
+                </div>
+              {% endfor %}
+        </div>
+    {% elseif empty %}
+      <div class="view-empty">
+        {{ empty }}
+      </div>
+    {% endif %}
+    <div class="view-more">
+        <a href="/artists">{{ 'View All Artists'|t }}</a>
+    </div>
+</div>

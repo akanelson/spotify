@@ -1,0 +1,71 @@
+uuid: e6f1b2ff-f78e-42f1-bdde-fcf679941421
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.albums.field_artist
+    - field.field.node.albums.field_image
+    - field.field.node.albums.field_release_date
+    - field.field.node.albums.field_spotify_link
+    - field.field.node.albums.field_spotify_slug
+    - node.type.albums
+  module:
+    - datetime
+    - link
+    - user
+id: node.albums.default
+targetEntityType: node
+bundle: albums
+mode: default
+content:
+  field_artist:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  field_image:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 107
+    region: content
+  field_release_date:
+    type: datetime_default
+    label: hidden
+    settings:
+      timezone_override: ''
+      format_type: release_date
+    third_party_settings: {  }
+    weight: 106
+    region: content
+  field_spotify_link:
+    type: link
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_spotify_slug:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden: {  }

@@ -1,0 +1,20 @@
+<?php
+
+/**
+ * @file
+ */
+
+use Drupal\views\ViewExecutable;
+
+/**
+ * Implements hook_theme_suggestions_view_alter().
+ */
+function spotify_theme_theme_suggestions_views_view_alter(array &$suggestions, array $variables, $hook) {
+  if (($view = $variables['view'] ?? FALSE) && $view instanceof ViewExecutable) {
+    /** @var \Drupal\views\ViewExecutable  $view */
+    $suggestions[] = 'views_view__' . $view->id();
+    $suggestions[] = 'views_view__' . $view->current_display;
+    $suggestions[] = 'views_view__' . $view->id() . '__' . $view->current_display;
+    $suggestions[] = 'views_view__' . $variables['view']->id();
+  }
+}

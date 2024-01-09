@@ -1,0 +1,4 @@
+services:
+  spotify_integration.spotify_client:
+    class: Drupal\spotify_integration\SpotifyClient
+    arguments: ['@http_client_factory', '@config.factory','@logger.factory']

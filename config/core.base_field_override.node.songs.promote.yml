@@ -1,0 +1,22 @@
+uuid: 04b51293-5b85-41b4-9839-b96d8c3c0b1c
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.songs
+id: node.songs.promote
+field_name: promote
+entity_type: node
+bundle: songs
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

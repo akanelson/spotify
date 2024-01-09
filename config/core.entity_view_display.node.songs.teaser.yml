@@ -1,0 +1,28 @@
+uuid: 474c2dcb-4005-407a-aa05-06f2b5c82791
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.songs.field_album
+    - field.field.node.songs.field_spotify_link
+    - field.field.node.songs.field_spotify_popularity
+    - field.field.node.songs.field_spotify_slug
+    - node.type.songs
+  module:
+    - user
+id: node.songs.teaser
+targetEntityType: node
+bundle: songs
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_album: true
+  field_spotify_link: true
+  field_spotify_popularity: true
+  field_spotify_slug: true

@@ -1,0 +1,22 @@
+uuid: 30763673-95cd-435c-81bb-1d9e4ee4083b
+langcode: en
+status: true
+dependencies:
+  theme:
+    - spotify_theme
+_core:
+  default_config_hash: X9I1OB0W3WlWtrK-CNcg6hNWwa8wficanpH8pYnDZDE
+id: dc_local_tasks
+theme: spotify_theme
+region: content
+weight: -3
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  label_display: '0'
+  provider: core
+  primary: true
+  secondary: true
+visibility: {  }
